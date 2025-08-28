@@ -1,6 +1,6 @@
 package src.domain;
 
-public class StudentManager {
+public class StudentService {
 
     public float calculateAverage(Student student) {
         float media = 0;
@@ -41,5 +41,15 @@ public class StudentManager {
             }
         }
         return min;
+    }
+
+    public void displaySummary(Student student) {
+        boolean isPassing = isPassing(student);
+        String status = isPassing ? "Aprovado" : "Reprovado";
+        System.out.println("Nome do Aluno: " + student.getName());
+        System.out.printf("Media: " + String.format("%.1f%n", calculateAverage(student)));
+        System.out.println("Status de Aprovação: " + status);
+        System.out.println("Nota mais alta: " + findHighestGrade(student));
+        System.out.println("Nota mais baixa: " + findLowestGrade(student));
     }
 }
