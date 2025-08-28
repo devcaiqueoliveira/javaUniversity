@@ -3,9 +3,9 @@ package src.domain;
 public class StudentManager {
 
     public float calculateAverage(Student student) {
-        float media=0;
+        float media = 0;
         float[] studentGrades = student.getGrades();
-        for(float nota:studentGrades ){
+        for (float nota : studentGrades) {
             media += nota;
         }
         media /= studentGrades.length;
@@ -13,7 +13,12 @@ public class StudentManager {
     }
 
     public void displayStudentAverage(Student student) {
-        System.out.println("\n Média de "+ student.getName() + " : "
-                + calculateAverage(student));
+        System.out.println("\n Média de " + student.getName() + " : " + calculateAverage(student));
     }
+
+    public boolean isPassing(Student student) {
+        float media = calculateAverage(student);
+        return media >= 60;
+    }
+
 }
