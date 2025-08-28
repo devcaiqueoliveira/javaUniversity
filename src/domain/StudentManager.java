@@ -21,4 +21,25 @@ public class StudentManager {
         return media >= 60;
     }
 
+    public float findHighestGrade(Student student) {
+        float[] grades = student.getGrades();
+        float max = grades[0];
+        for(float grade: grades){
+            if (grade > max) {
+                max = grade;
+            }
+        }
+        return max;
+    }
+
+    public float findLowestGrade(Student student){
+        float[] grades = student.getGrades();
+        float min = grades[0];
+        for(float grade: grades){
+            if (grade < min) {
+                min = grade;
+            }
+        }
+        return min;
+    }
 }
