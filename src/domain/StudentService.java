@@ -12,10 +12,6 @@ public class StudentService {
         return media;
     }
 
-    public void displayStudentAverage(Student student) {
-        System.out.println("\n Média de " + student.getName() + " : " + calculateAverage(student));
-    }
-
     public boolean isPassing(Student student) {
         float media = calculateAverage(student);
         return media >= 60;
