@@ -67,11 +67,11 @@ public class Main {
     }
 
     private static void handleAddGrade() {
-        System.out.println("Digite o nome do aluno: ");
+        System.out.print("Digite o nome do aluno: ");
         String studentName = sc.nextLine();
-        System.out.println("Digite o nome da matéria: ");
+        System.out.print("Digite o nome da matéria: ");
         String subjectName = sc.nextLine();
-        System.out.println("Digite a nota a ser adicionada: ");
+        System.out.print("Digite a nota a ser adicionada: ");
         double grade;
         try {
             grade = Double.parseDouble(sc.nextLine().replace(',', '.'));

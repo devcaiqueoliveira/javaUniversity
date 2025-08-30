@@ -8,7 +8,6 @@ import java.util.Map;
 
 public class StudentCache {
     private final Map<String, Student> studentMap = new HashMap<>();
-
     public void addStudent(String studentName, Student student) {
         studentMap.put(studentName, student);
     }
